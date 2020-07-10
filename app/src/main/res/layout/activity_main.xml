@@ -6,87 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <android.support.design.widget.TabLayout
+
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabTextColor="#F19595">
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/tabItem1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Address-Book" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/tabItem2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gallery" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/tabItem3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Flow" />
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </android.support.design.widget.TabLayout>
-    <FrameLayout
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tabs"
-        android:id="@+id/contents">
+        app:layout_constraintStart_toStartOf="@+id/tabs"
+        app:layout_constraintTop_toBottomOf="@+id/tabs">
 
-        <ListView
-            android:id="@+id/thelist"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:visibility="invisible"/>
+    </android.support.v4.view.ViewPager>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FF9800"
-            android:gravity="center"
-            android:visibility="invisible"
-            android:id="@+id/text2"
-            android:text="TEXT 2" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FF9800"
-            android:gravity="center"
-            android:visibility="invisible"
-            android:id="@+id/text3"
-            android:text="TEXT 3" />
-<!--        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:paddingLeft="10dp"-->
-<!--            android:paddingRight="10dp">-->
-<!--            <ImageSwitcher android:id="@+id/imgSw"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="250dp"-->
-<!--                android:visibility="invisible"/>-->
-<!--            <Button-->
-<!--                android:id="@+id/btnPrevious"-->
-<!--                android:layout_below="@+id/imgSw"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:visibility="invisible"-->
-<!--                android:text="Previous" android:layout_marginLeft="100dp" />-->
-<!--            <Button-->
-<!--                android:id="@+id/btnNext"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignBottom="@+id/btnPrevious"-->
-<!--                android:layout_toRightOf="@+id/btnPrevious"-->
-<!--                android:visibility="invisible"-->
-<!--                android:text="Next" />-->
-<!--        </RelativeLayout>-->
-
-    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

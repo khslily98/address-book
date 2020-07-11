@@ -55,7 +55,6 @@ public class Fragment_First extends Fragment {
             }
         });
         return view;
-
     }
     public void get_json()
     {

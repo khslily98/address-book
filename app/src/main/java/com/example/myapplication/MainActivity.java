@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public void setupViewPager(ViewPager viewPager) {
         adapter.addFragment(new Fragment_First(), "Addressbook");
         adapter.addFragment(new Fragment_Second(), "Gallery");
-        adapter.addFragment(new Fragment_Third(), "코-쳌");
+        adapter.addFragment(new Fragment_Third(), "Do not Try");
         viewPager.setAdapter(adapter);
     }
 }

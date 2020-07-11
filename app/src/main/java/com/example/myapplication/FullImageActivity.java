@@ -9,7 +9,7 @@ import android.widget.ImageView;
 public class FullImageActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_image);
 
@@ -20,6 +20,7 @@ public class FullImageActivity extends AppCompatActivity {
 
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setImageResource(adapter.images[position]);
+
 
     }
 }

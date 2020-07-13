@@ -12,6 +12,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.widget.Toast;
 
 public class RingtonePlayingService extends Service {
 
@@ -28,6 +29,7 @@ public class RingtonePlayingService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+
 
         if (Build.VERSION.SDK_INT >= 26) {
             String CHANNEL_ID = "default";

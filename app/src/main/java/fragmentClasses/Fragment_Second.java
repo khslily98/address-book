@@ -35,16 +35,17 @@ public class Fragment_Second extends Fragment {
         GridView gridView = (GridView) view.findViewById(R.id.gridView);
         gridView.setAdapter(new ImageAdapter(getActivity()));
 
-//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-//            {
-//                Intent i = new Intent(getActivity().getApplicationContext(), FullImageActivity.class);
-//                i.putExtra("id",position);
-//                startActivity(i);
-//            }
-//
-//        });
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                Intent i = new Intent(getActivity().getApplicationContext(), FullImageActivity.class);
+                i.putExtra("id",position);
+                startActivity(i);
+            }
+        });
+
         return view;
     }
 

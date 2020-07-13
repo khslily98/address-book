@@ -10,9 +10,7 @@ public class Alarm_Receiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
-
-
+        System.out.println("reached ringtone frommingyu");
         this.context = context;
         // intent로부터 전달받은 string
         String get_yout_string = intent.getExtras().getString("state");

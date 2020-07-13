@@ -43,12 +43,12 @@
     </LinearLayout>
 
     <TimePicker
-        android:id="@+id/time_picker"
+        android:id="@+id/timePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Start" />

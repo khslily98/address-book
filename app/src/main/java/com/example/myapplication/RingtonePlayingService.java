@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.IBinder;
@@ -73,6 +74,8 @@ public class RingtonePlayingService extends Service {
 
             mediaPlayer = MediaPlayer.create(this,R.raw.coffindance);
             mediaPlayer.start();
+            mediaPlayer.setLooping(true);
+            mediaPlayer.setVolume(1.0f,1.0f);
 
             this.isRunning = true;
             this.startId = 0;
@@ -80,7 +83,6 @@ public class RingtonePlayingService extends Service {
 
         // 알람음 재생 O , 알람음 종료 버튼 클릭
         else if(this.isRunning && startId == 0) {
-
             mediaPlayer.stop();
             mediaPlayer.reset();
             mediaPlayer.release();

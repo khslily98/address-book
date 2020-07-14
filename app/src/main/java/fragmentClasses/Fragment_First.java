@@ -1,11 +1,7 @@
 package fragmentClasses;
 
-import android.content.Context;
-import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.ConditionVariable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,8 +50,12 @@ public class Fragment_First extends Fragment {
                         Toast.LENGTH_LONG).show();
             }
         });
+
+
+
         return view;
     }
+
     public void get_json()
     {
         String json;
@@ -89,5 +89,10 @@ public class Fragment_First extends Fragment {
         {
             e.printStackTrace();
         }
+
+
+
     }
+
+
 }

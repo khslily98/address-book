@@ -42,7 +42,6 @@ public class Fragment_Third extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_third,container,false);
 
-        final Boolean[] version = {true};
         // 알람매니저 설정
         alarm_manager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
 
@@ -118,6 +117,7 @@ public class Fragment_Third extends Fragment {
     private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&**()_+=-;/?<>,.{}[]";
     private static final String Developers = ";:li1I[]{}():|!";
     private static final String Developers2 = "lI";
+    private static final String Developers3 = "0oO";
     public static String randomAlphaNumeric(int count) {
         StringBuilder builder = new StringBuilder();
         while (count-- != 0) {

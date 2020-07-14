@@ -1,56 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:gravity="top"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:textSize="10sp"
-        android:gravity="center_horizontal"
-        android:text="KKOK HAJI MALANUNGIRL HANUN SARAMDLE YEE ITZY"/>
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:gravity="top"
+    android:background="@drawable/sakel"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:text="KKOK HAJI MALANUNGIRL HANUN SARAMDLE YEE ITZY"-->
+<!--        android:textSize="10sp" />-->
+
     <LinearLayout
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/passwordhint"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="hint" />
+            android:layout_weight="1.2"
+            android:background="#FF0000"
+            android:gravity="center_vertical"
+            android:text="hint"
+            android:textAlignment="center"
+            android:textColor="#EAE646"
+            android:textSize="20dp"
+            android:visibility="invisible" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="124dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="password" />
+            android:background="#EAE646"
+            android:gravity="center_vertical"
+            android:text="password"
+            android:textAlignment="center"
+            android:textColor="#FF0000" />
 
         <Button
             android:id="@+id/btn_stop"
-            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_height="50dp"
-            android:text="Stop" />
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/cardview_light_background"
+            android:background="#000000"
+            android:text="STOP!"
+            android:textAlignment="center"
+            android:textSize="35dp"
+            />
+
     </LinearLayout>
 
     <TimePicker
         android:id="@+id/timePicker"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:amPmTextColor="#8DFF73"
+        android:headerBackground="#00CC0000"
+        android:numbersBackgroundColor="#00FFFFFF"
+        android:numbersSelectorColor="#99752FF1"
+        android:numbersTextColor="#0038FF" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start" />
+        android:background="#00000000"
+        android:text="Start"
+        android:textColor="#EAF03C"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/alarmstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="no alarm set"
+        android:textColor="#ffffff"
+        android:visibility="visible" />
 
 </LinearLayout>

@@ -63,6 +63,7 @@ public class Fragment_Third2 extends Fragment {
         });
         final Button button_on = (Button) view.findViewById(R.id.button);
         button_on.setOnClickListener(new Button.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View view)
             {
@@ -86,6 +87,9 @@ public class Fragment_Third2 extends Fragment {
             {
                 cal_alarm.add(Calendar.DATE,1);
             }
+                int hour = timePicker.getHour();
+                int minute = timePicker.getMinute();
+                Toast.makeText(getActivity(),"Alarm 예정 " + hour + "시 " + minute + "분",Toast.LENGTH_SHORT).show();
                 System.out.println(pendingIntent);
                 System.out.println(i);
             alarmManager.set(AlarmManager.RTC_WAKEUP,cal_alarm.getTimeInMillis(), pendingIntent);
@@ -99,16 +103,16 @@ public class Fragment_Third2 extends Fragment {
             public void onClick(View v) {
                 EditText text_pw = (EditText) view.findViewById(R.id.password);
                 String pw = text_pw.getText().toString();
-                alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
-                i = new Intent(getActivity(), MyBroadcastReceiver.class);
-                pendingIntent = PendingIntent.getBroadcast(getActivity(),0,i,PendingIntent.FLAG_UPDATE_CURRENT);
+//                alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+//                i = new Intent(getActivity(), MyBroadcastReceiver.class);
+//                pendingIntent = PendingIntent.getBroadcast(getActivity(),0,i,PendingIntent.FLAG_UPDATE_CURRENT);
                 String pw_hint = text_pwhint.getText().toString();
                 System.out.println(pw_hint);
                 System.out.println(pendingIntent);
                 System.out.println(i);
-//                alarmManager.cancel(pendingIntent);
-//                i.putExtra("state", "alarm off");
-//                getActivity().sendBroadcast(i);
+                alarmManager.cancel(pendingIntent);
+                i.putExtra("state", "alarm off");
+                getActivity().sendBroadcast(i);
                 if (pendingIntent == null){
                     Toast.makeText(getActivity(), "No alarm has been set", Toast.LENGTH_SHORT).show();
                 }
@@ -116,8 +120,8 @@ public class Fragment_Third2 extends Fragment {
                     if (pw.equals(pw_hint)) {
                         Toast.makeText(getActivity(), "Password correct! Alarm Off", Toast.LENGTH_SHORT).show();
                         alarmManager.cancel(pendingIntent);
-                        i.putExtra("state", "alarm off");
-                        getActivity().sendBroadcast(i);
+//                        i.putExtra("state", "alarm off");
+////                        getActivity().sendBroadcast(i);
                     }
                     else {
                         Toast.makeText(getActivity(), "password wrong try again!", Toast.LENGTH_SHORT).show();

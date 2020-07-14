@@ -6,18 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    android:variablePadding="false"
+    android:gravity="center">
 
     <GridView
         android:id="@+id/gridView"
+        android:background="#90B0E0"
+        android:listSelector="@drawable/gridview_selector"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:columnWidth="110dp"
         android:numColumns="auto_fit"
-        android:horizontalSpacing="5dp"
         android:stretchMode="columnWidth"
         tools:layout_editor_absoluteY="1dp" />
 </RelativeLayout>

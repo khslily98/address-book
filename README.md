@@ -1,3 +1,6 @@
-# address-book
+#First Assignment
+app name : Wake Down
 
-hello!
+First Tap : address book
+use json file
+if push call button, appliction makes 
